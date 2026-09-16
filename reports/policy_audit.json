@@ -1,6 +1,6 @@
 [
   {
-    "ts": 1789574614,
+    "ts": 1789582237,
     "action": "token.scan",
     "category": "read",
     "effect": "allow",
@@ -8,7 +8,7 @@
     "reason": "read-only public data; no signing, no spend"
   },
   {
-    "ts": 1789574615,
+    "ts": 1789582248,
     "action": "token.scan",
     "category": "read",
     "effect": "allow",
@@ -16,7 +16,7 @@
     "reason": "read-only public data; no signing, no spend"
   },
   {
-    "ts": 1789574617,
+    "ts": 1789582255,
     "action": "token.scan",
     "category": "read",
     "effect": "allow",
@@ -24,7 +24,7 @@
     "reason": "read-only public data; no signing, no spend"
   },
   {
-    "ts": 1789574619,
+    "ts": 1789582257,
     "action": "token.scan",
     "category": "read",
     "effect": "allow",
@@ -32,7 +32,7 @@
     "reason": "read-only public data; no signing, no spend"
   },
   {
-    "ts": 1789574623,
+    "ts": 1789582259,
     "action": "token.scan",
     "category": "read",
     "effect": "allow",
@@ -40,7 +40,7 @@
     "reason": "read-only public data; no signing, no spend"
   },
   {
-    "ts": 1789574623,
+    "ts": 1789582259,
     "action": "swap.execute",
     "category": "value-moving",
     "effect": "deny",

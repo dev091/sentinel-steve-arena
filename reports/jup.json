@@ -9,7 +9,7 @@
     },
     {
       "severity": "INFO",
-      "detail": "Healthy liquidity ($1,613,763) on meteora."
+      "detail": "Healthy liquidity ($486,601,448) on meteora."
     }
   ],
   "chain": {
@@ -17,9 +17,9 @@
     "mint_authority_renounced": true,
     "freeze_authority": null,
     "freeze_authority_renounced": true,
-    "supply_raw": 6861486995458751,
+    "supply_raw": 6861486995436339,
     "decimals": 6,
-    "supply_ui": 6861486995.458751
+    "supply_ui": 6861486995.436339
   },
   "metadata": {
     "name": "Jupiter",
@@ -29,17 +29,17 @@
   "market": {
     "listed": true,
     "dex": "meteora",
-    "pair_address": "C8Gr6AUuq9hEdSYJzoEpNcdjpojPZwqG5MtQbeouNNwg",
-    "price_usd": "0.2121",
-    "liquidity_usd": 1613763.22,
-    "fdv": 1485071210,
-    "market_cap": 704416624,
-    "pair_created_at": 1706713193000,
-    "buys_24h": 883,
-    "sells_24h": 1440,
-    "sell_pressure": 0.6198880757640981,
-    "pair_url": "https://dexscreener.com/solana/c8gr6auuq9hedsyjzoepncdjpojpzwqg5mtqbeounnwg"
+    "pair_address": "3xNGdc58axYtrJ64STQz5TrdQWVtWHLR888iRBbWZnEe",
+    "price_usd": "1067.11",
+    "liquidity_usd": 486601447.55,
+    "fdv": 7469755940154,
+    "market_cap": 3543143402918,
+    "pair_created_at": 1761396180000,
+    "buys_24h": 90,
+    "sells_24h": 85,
+    "sell_pressure": 0.4857142857142857,
+    "pair_url": "https://dexscreener.com/solana/3xngdc58axytrj64stqz5trdqwvtwhlr888irbbwznee"
   },
-  "scanned_at": 1789574623,
+  "scanned_at": 1789582259,
   "agent": "SENTINEL/1.0"
 }

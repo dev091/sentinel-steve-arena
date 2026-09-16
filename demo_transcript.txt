@@ -1,5 +1,5 @@
 SENTINEL — Steve Agent Arena demo
-run at 2026-09-16 16:03:34 UTC
+run at 2026-09-16 18:10:37 UTC
 data: Solana mainnet-beta RPC (public) + DexScreener (public). Read-only. No keys.
 
 ======================================================================
@@ -12,14 +12,14 @@ Recommended action: No red flags detected. Standard position sizing and your usu
 
 Findings:
   [INFO] Metadata: Wrapped SOL (SOL)
-  [INFO] Healthy liquidity ($32,158,233) on raydium.
+  [INFO] Healthy liquidity ($32,290,827) on raydium.
 
 Mint authority: RENOUNCED
 Freeze authority: RENOUNCED
 Supply: 0.00 (decimals=9)
-Market: raydium | liquidity $32,158,233 | https://dexscreener.com/solana/58oqchx4ywmvkdwllzzbi4chocc2fqcuwbkwmihlyqo2
+Market: raydium | liquidity $32,290,827 | https://dexscreener.com/solana/58oqchx4ywmvkdwllzzbi4chocc2fqcuwbkwmihlyqo2
 
-  latency: total 1.87s (rpc_mint 0.56s | rpc_metadata 0.49s | dexscreener 0.82s | scoring 0.0ms)
+  latency: total 11.28s (rpc_mint 0.52s | rpc_metadata 2.81s | dexscreener 7.95s | scoring 0.0ms)
   -> report saved: reports/wsol.json
 
 ======================================================================
@@ -34,14 +34,14 @@ Findings:
   [HIGH] Mint authority active — supply can be inflated at will.
   [HIGH] Freeze authority active — holders' tokens can be frozen.
   [INFO] Metadata: USD Coin (USDC)
-  [INFO] Healthy liquidity ($20,642,972) on pumpswap.
+  [INFO] Healthy liquidity ($21,026,718) on pumpswap.
 
 Mint authority: BJE5MMbqXjVwjAF7oxwPYXnTXDyspzZyt4vwenNw5ruG
 Freeze authority: 7dGbd2QZcCKcTndnHcTL8q7SMVXAkp688NTQYwrRCrar
-Supply: 7,673,515,157.12 (decimals=6)
-Market: pumpswap | liquidity $20,642,972 | https://dexscreener.com/solana/2uf4xh61rdwxng9woyxsvqp7zua6klfpb3nvnrqeoisd
+Supply: 7,606,107,561.52 (decimals=6)
+Market: pumpswap | liquidity $21,026,718 | https://dexscreener.com/solana/2uf4xh61rdwxng9woyxsvqp7zua6klfpb3nvnrqeoisd
 
-  latency: total 1.80s (rpc_mint 0.54s | rpc_metadata 0.50s | dexscreener 0.76s | scoring 0.0ms)
+  latency: total 6.47s (rpc_mint 2.73s | rpc_metadata 3.11s | dexscreener 0.63s | scoring 0.0ms)
   -> report saved: reports/usdc.json
 
 ======================================================================
@@ -56,14 +56,14 @@ Findings:
   [HIGH] Mint authority active — supply can be inflated at will.
   [HIGH] Freeze authority active — holders' tokens can be frozen.
   [INFO] Metadata: USDT (USDT)
-  [INFO] Healthy liquidity ($64,700,310) on meteora.
+  [INFO] Healthy liquidity ($64,330,069) on meteora.
 
 Mint authority: Q6XprfkF8RQQKoQVG33xT88H7wi8Uk1B1CC7YAs69Gi
 Freeze authority: Q6XprfkF8RQQKoQVG33xT88H7wi8Uk1B1CC7YAs69Gi
-Supply: 3,839,903,760.41 (decimals=6)
-Market: meteora | liquidity $64,700,310 | https://dexscreener.com/solana/54vp27ulaw4wnlo5n7r4fcc6zlamoqc28xbarjss4euj
+Supply: 3,839,903,759.18 (decimals=6)
+Market: meteora | liquidity $64,330,069 | https://dexscreener.com/solana/54vp27ulaw4wnlo5n7r4fcc6zlamoqc28xbarjss4euj
 
-  latency: total 1.65s (rpc_mint 0.41s | rpc_metadata 0.44s | dexscreener 0.80s | scoring 0.0ms)
+  latency: total 1.70s (rpc_mint 0.46s | rpc_metadata 0.68s | dexscreener 0.56s | scoring 0.0ms)
   -> report saved: reports/usdt.json
 
 ======================================================================
@@ -76,14 +76,14 @@ Recommended action: No red flags detected. Standard position sizing and your usu
 
 Findings:
   [INFO] Metadata: Jupiter (JUP)
-  [INFO] Healthy liquidity ($1,613,763) on meteora.
+  [INFO] Healthy liquidity ($486,601,448) on meteora.
 
 Mint authority: RENOUNCED
 Freeze authority: RENOUNCED
-Supply: 6,861,486,995.46 (decimals=6)
-Market: meteora | liquidity $1,613,763 | https://dexscreener.com/solana/c8gr6auuq9hedsyjzoepncdjpojpzwqg5mtqbeounnwg
+Supply: 6,861,486,995.44 (decimals=6)
+Market: meteora | liquidity $486,601,448 | https://dexscreener.com/solana/3xngdc58axytrj64stqz5trdqwvtwhlr888irbbwznee
 
-  latency: total 3.64s (rpc_mint 0.45s | rpc_metadata 2.45s | dexscreener 0.75s | scoring 0.0ms)
+  latency: total 2.07s (rpc_mint 0.77s | rpc_metadata 0.66s | dexscreener 0.65s | scoring 0.0ms)
   -> report saved: reports/jup.json
 
 ======================================================================
@@ -113,10 +113,10 @@ Market: raydium | liquidity $3,200
 [3] COMPARISON TABLE — live mainnet scans
 ======================================================================
   token verdict     score   liquidity       scan time
-  wSOL  SAFE        0/100   $  32,158,233   1.9s
-  USDC  HIGH RISK   45/100   $  20,642,972   1.8s
-  USDT  HIGH RISK   45/100   $  64,700,310   1.7s
-  JUP   SAFE        0/100   $   1,613,763   3.6s
+  wSOL  SAFE        0/100   $  32,290,827   11.3s
+  USDC  HIGH RISK   45/100   $  21,026,718   6.5s
+  USDT  HIGH RISK   45/100   $  64,330,069   1.7s
+  JUP   SAFE        0/100   $ 486,601,448   2.1s
 
 ======================================================================
 [4] POLICY ENGINE — allow + block demonstration

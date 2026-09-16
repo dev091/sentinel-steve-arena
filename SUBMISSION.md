@@ -20,9 +20,9 @@ are auto-allowed, all value-moving actions are denied by default with a full
 audit log. The agent never signs and never moves funds.
 
 Live demo evidence (2026-09-16, mainnet, reproducible with `python3 demo.py` in ~9s):
-- wSOL → SAFE, 0/100 (authorities renounced, $32.2M liquidity)
-- JUP → SAFE, 0/100 (authorities renounced, $1.6M liquidity)
-- USDC → 45/100 and USDT → 45/100, honestly flagging the issuers' by-design
+- wSOL → SAFE, 0/100 (authorities renounced, $32.3M liquidity)
+- JUP → SAFE, 0/100 (authorities renounced, $486.6M liquidity)
+- USDC → HIGH RISK, 45/100 and USDT → HIGH RISK, 45/100, honestly flagging the issuers' by-design
   active mint/freeze authorities (facts, not accusations)
 - Malicious-pattern fixture → CRITICAL, 100/100 (simulated inputs through the
   real scoring engine — no real token defamed)
@@ -32,15 +32,15 @@ Live demo evidence (2026-09-16, mainnet, reproducible with `python3 demo.py` in 
 SAP registration: agent.json manifest (colon-namespaced capabilities,
 3 caps / 1 protocol, within on-chain validator limits), launched via Steve's
 hosted builder (`sap_build_agent_register_transaction`).
-Registration tx: <PASTE_TX_SIGNATURE_AFTER_LAUNCH>
-Agent public key: <PASTE_AFTER_LAUNCH>
+Registration tx: 5o4cJh3XHvxqEXr6gyCKjekBot2j22QGWFTztUycQNLFtoFsMWnuK4WaQvTfHcUYm9ZeCoysvJ4DByj5VJ3LVeWj
+Agent public key: Fi8DRYk5xgQGTQNEsWT7otWLA3oVKGsUALtomUQoz7VX
 
-Repo: <PASTE_PUBLIC_REPO_URL>
+Repo: https://github.com/dev091/sentinel-steve-arena
 Demo transcript: demo_transcript.txt · Reports: reports/*.json
 
 ## Links to include
 
-- Public repo: <push this folder to a public GitHub repo, paste URL>
+- Public repo: https://github.com/dev091/sentinel-steve-arena
 - Listing: https://earn.superteam.fun/listing/steve-agent-arena-launch-your-agent-and-win-500-usdc
 - Steve: https://steve.oobeprotocol.ai/
 - Bounty tech spec (judging criteria): https://github.com/oobe-protocol/sap-mcp/blob/main/docs/13_BOUNTY_PROGRAM_TECHNICAL_SPEC.md

@@ -17,7 +17,7 @@
     },
     {
       "severity": "INFO",
-      "detail": "Healthy liquidity ($64,700,310) on meteora."
+      "detail": "Healthy liquidity ($64,330,069) on meteora."
     }
   ],
   "chain": {
@@ -25,9 +25,9 @@
     "mint_authority_renounced": false,
     "freeze_authority": "Q6XprfkF8RQQKoQVG33xT88H7wi8Uk1B1CC7YAs69Gi",
     "freeze_authority_renounced": false,
-    "supply_raw": 3839903760409574,
+    "supply_raw": 3839903759176999,
     "decimals": 6,
-    "supply_ui": 3839903760.409574
+    "supply_ui": 3839903759.176999
   },
   "metadata": {
     "name": "USDT",
@@ -38,16 +38,16 @@
     "listed": true,
     "dex": "meteora",
     "pair_address": "54Vp27uLaw4wNLo5n7r4fcC6zLamoQc28xBARjss4EUJ",
-    "price_usd": "0.09014",
-    "liquidity_usd": 64700309.81,
-    "fdv": 901414013,
-    "market_cap": 264433385,
+    "price_usd": "0.08947",
+    "liquidity_usd": 64330069.21,
+    "fdv": 894774015,
+    "market_cap": 168901122,
     "pair_created_at": 1783666044000,
-    "buys_24h": 18190,
-    "sells_24h": 15611,
-    "sell_pressure": 0.4618502411171267,
+    "buys_24h": 17452,
+    "sells_24h": 15724,
+    "sell_pressure": 0.47395707740535326,
     "pair_url": "https://dexscreener.com/solana/54vp27ulaw4wnlo5n7r4fcc6zlamoqc28xbarjss4euj"
   },
-  "scanned_at": 1789574619,
+  "scanned_at": 1789582257,
   "agent": "SENTINEL/1.0"
 }

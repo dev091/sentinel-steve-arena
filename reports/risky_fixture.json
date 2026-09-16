@@ -50,13 +50,13 @@
     "liquidity_usd": 3200,
     "fdv": 1200000,
     "market_cap": 1200000,
-    "pair_created_at": 1789553014098,
+    "pair_created_at": 1789560637607,
     "buys_24h": 18,
     "sells_24h": 82,
     "sell_pressure": 0.82,
     "pair_url": null
   },
-  "scanned_at": 1789574623,
+  "scanned_at": 1789582259,
   "agent": "SENTINEL/1.0",
   "note": "SIMULATED on-chain/market inputs run through the real score_token() engine. Not a real token."
 }
