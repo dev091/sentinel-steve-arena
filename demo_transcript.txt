@@ -1,0 +1,76 @@
+SENTINEL — Steve Agent Arena demo
+run at 2026-09-16 16:02:11 UTC
+data: Solana mainnet-beta RPC (public) + DexScreener (public). Read-only. No keys.
+
+======================================================================
+[1] LIVE SCAN — USDC (EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v)
+======================================================================
+  policy check: token.scan ... ALLOW (rule=read.scan)
+SENTINEL risk report — EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
+Verdict: HIGH RISK  |  Risk score: 45/100
+
+Findings:
+  [HIGH] Mint authority active — supply can be inflated at will.
+  [HIGH] Freeze authority active — holders' tokens can be frozen.
+  [INFO] Metadata: USD Coin (USDC)
+  [INFO] Healthy liquidity ($20,586,176) on pumpswap.
+
+Mint authority: BJE5MMbqXjVwjAF7oxwPYXnTXDyspzZyt4vwenNw5ruG
+Freeze authority: 7dGbd2QZcCKcTndnHcTL8q7SMVXAkp688NTQYwrRCrar
+Supply: 7,673,669,193.85 (decimals=6)
+Market: pumpswap | liquidity $20,586,176 | https://dexscreener.com/solana/2uf4xh61rdwxng9woyxsvqp7zua6klfpb3nvnrqeoisd
+
+  -> report saved: reports/usdc.json
+
+======================================================================
+[1] LIVE SCAN — wSOL (So11111111111111111111111111111111111111112)
+======================================================================
+  policy check: token.scan ... ALLOW (rule=read.scan)
+SENTINEL risk report — So11111111111111111111111111111111111111112
+Verdict: SAFE  |  Risk score: 0/100
+
+Findings:
+  [INFO] Metadata: Wrapped SOL (SOL)
+  [INFO] Healthy liquidity ($32,150,468) on raydium.
+
+Mint authority: RENOUNCED
+Freeze authority: RENOUNCED
+Supply: 0.00 (decimals=9)
+Market: raydium | liquidity $32,150,468 | https://dexscreener.com/solana/58oqchx4ywmvkdwllzzbi4chocc2fqcuwbkwmihlyqo2
+
+  -> report saved: reports/wsol.json
+
+======================================================================
+[2] SIMULATED SCAN — malicious-pattern fixture (labeled, not a real token)
+======================================================================
+SENTINEL risk report — SIMULATED-RISKY-FIXTURE-11111111111111111111
+Verdict: CRITICAL  |  Risk score: 95/100
+
+Findings:
+  [HIGH] Mint authority active — supply can be inflated at will.
+  [HIGH] Freeze authority active — holders' tokens can be frozen.
+  [HIGH] Thin liquidity ($3,200) — high slippage / rug risk.
+  [MED] Heavy 24h sell pressure (82% of txns are sells).
+  [MED] Pair is less than 24h old — extra caution.
+
+Mint authority: ACTIVE (undisclosed)
+Freeze authority: ACTIVE (undisclosed)
+Supply: 1,000,000,000.00 (decimals=6)
+Market: raydium | liquidity $3,200
+
+  -> report saved: reports/risky_fixture.json
+
+======================================================================
+[3] POLICY ENGINE — allow + block demonstration
+======================================================================
+  token.scan        -> ALLOW  (rule=read.scan)
+    reason: read-only public data; no signing, no spend
+  swap.execute      -> DENY  (rule=deny.value-move)
+    reason: agent holds no keys; value movement requires explicit user approval in Steve
+
+  -> audit log saved: reports/policy_audit.json
+
+======================================================================
+Demo complete. SENTINEL is read-only by policy: it scans, scores,
+and reports — it never signs and never moves funds.
+======================================================================

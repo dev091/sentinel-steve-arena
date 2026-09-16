@@ -1,0 +1,34 @@
+[
+  {
+    "ts": 1789574531,
+    "action": "token.scan",
+    "category": "read",
+    "effect": "allow",
+    "rule": "read.scan",
+    "reason": "read-only public data; no signing, no spend"
+  },
+  {
+    "ts": 1789574538,
+    "action": "token.scan",
+    "category": "read",
+    "effect": "allow",
+    "rule": "read.scan",
+    "reason": "read-only public data; no signing, no spend"
+  },
+  {
+    "ts": 1789574543,
+    "action": "token.scan",
+    "category": "read",
+    "effect": "allow",
+    "rule": "read.scan",
+    "reason": "read-only public data; no signing, no spend"
+  },
+  {
+    "ts": 1789574543,
+    "action": "swap.execute",
+    "category": "value-moving",
+    "effect": "deny",
+    "rule": "deny.value-move",
+    "reason": "agent holds no keys; value movement requires explicit user approval in Steve"
+  }
+]

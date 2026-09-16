@@ -1,0 +1,46 @@
+{
+  "mint": "SIMULATED-RISKY-FIXTURE-11111111111111111111",
+  "risk_score": 95,
+  "verdict": "CRITICAL",
+  "findings": [
+    {
+      "severity": "HIGH",
+      "detail": "Mint authority active \u2014 supply can be inflated at will."
+    },
+    {
+      "severity": "HIGH",
+      "detail": "Freeze authority active \u2014 holders' tokens can be frozen."
+    },
+    {
+      "severity": "HIGH",
+      "detail": "Thin liquidity ($3,200) \u2014 high slippage / rug risk."
+    },
+    {
+      "severity": "MED",
+      "detail": "Heavy 24h sell pressure (82% of txns are sells)."
+    },
+    {
+      "severity": "MED",
+      "detail": "Pair is less than 24h old \u2014 extra caution."
+    }
+  ],
+  "chain": {
+    "mint_authority_renounced": false,
+    "freeze_authority_renounced": false,
+    "supply_ui": 1000000000,
+    "decimals": 6
+  },
+  "metadata": {
+    "name": null,
+    "symbol": null,
+    "uri": null
+  },
+  "market": {
+    "listed": true,
+    "dex": "raydium",
+    "liquidity_usd": 3200
+  },
+  "scanned_at": 1789574531,
+  "agent": "SENTINEL/1.0",
+  "note": "SIMULATED fixture demonstrating risk-engine response to a malicious pattern. Not a real token."
+}

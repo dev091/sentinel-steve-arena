@@ -1,0 +1,45 @@
+{
+  "mint": "So11111111111111111111111111111111111111112",
+  "risk_score": 0,
+  "verdict": "SAFE",
+  "findings": [
+    {
+      "severity": "INFO",
+      "detail": "Metadata: Wrapped SOL (SOL)"
+    },
+    {
+      "severity": "INFO",
+      "detail": "Healthy liquidity ($32,150,468) on raydium."
+    }
+  ],
+  "chain": {
+    "mint_authority": null,
+    "mint_authority_renounced": true,
+    "freeze_authority": null,
+    "freeze_authority_renounced": true,
+    "supply_raw": 0,
+    "decimals": 9,
+    "supply_ui": 0.0
+  },
+  "metadata": {
+    "name": "Wrapped SOL",
+    "symbol": "SOL",
+    "uri": ""
+  },
+  "market": {
+    "listed": true,
+    "dex": "raydium",
+    "pair_address": "58oQChx4yWmvKdwLLZzBi4ChoCc2fqCUWBkwMihLYQo2",
+    "price_usd": "97.44",
+    "liquidity_usd": 32150467.52,
+    "fdv": null,
+    "market_cap": null,
+    "pair_created_at": 1669602450000,
+    "buys_24h": 176229,
+    "sells_24h": 153990,
+    "sell_pressure": 0.4663268921533891,
+    "pair_url": "https://dexscreener.com/solana/58oqchx4ywmvkdwllzzbi4chocc2fqcuwbkwmihlyqo2"
+  },
+  "scanned_at": 1789574543,
+  "agent": "SENTINEL/1.0"
+}

@@ -1,0 +1,53 @@
+{
+  "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+  "risk_score": 45,
+  "verdict": "HIGH RISK",
+  "findings": [
+    {
+      "severity": "HIGH",
+      "detail": "Mint authority active \u2014 supply can be inflated at will."
+    },
+    {
+      "severity": "HIGH",
+      "detail": "Freeze authority active \u2014 holders' tokens can be frozen."
+    },
+    {
+      "severity": "INFO",
+      "detail": "Metadata: USD Coin (USDC)"
+    },
+    {
+      "severity": "INFO",
+      "detail": "Healthy liquidity ($20,586,176) on pumpswap."
+    }
+  ],
+  "chain": {
+    "mint_authority": "BJE5MMbqXjVwjAF7oxwPYXnTXDyspzZyt4vwenNw5ruG",
+    "mint_authority_renounced": false,
+    "freeze_authority": "7dGbd2QZcCKcTndnHcTL8q7SMVXAkp688NTQYwrRCrar",
+    "freeze_authority_renounced": false,
+    "supply_raw": 7673669193852264,
+    "decimals": 6,
+    "supply_ui": 7673669193.852264
+  },
+  "metadata": {
+    "name": "USD Coin",
+    "symbol": "USDC",
+    "uri": ""
+  },
+  "market": {
+    "listed": true,
+    "dex": "pumpswap",
+    "pair_address": "2uF4Xh61rDwxnG9woyxsVQP7zuA6kLFpb3NvnRQeoiSd",
+    "price_usd": "0.003597",
+    "liquidity_usd": 20586176.28,
+    "fdv": 2999313912,
+    "market_cap": 1684628049,
+    "pair_created_at": 1752512149000,
+    "buys_24h": 32951,
+    "sells_24h": 24863,
+    "sell_pressure": 0.4300515446085723,
+    "pair_url": "https://dexscreener.com/solana/2uf4xh61rdwxng9woyxsvqp7zua6klfpb3nvnrqeoisd"
+  },
+  "scanned_at": 1789574538,
+  "agent": "SENTINEL/1.0"
+}
