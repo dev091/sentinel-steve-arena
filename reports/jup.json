@@ -1,0 +1,45 @@
+{
+  "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+  "risk_score": 0,
+  "verdict": "SAFE",
+  "findings": [
+    {
+      "severity": "INFO",
+      "detail": "Metadata: Jupiter (JUP)"
+    },
+    {
+      "severity": "INFO",
+      "detail": "Healthy liquidity ($1,613,763) on meteora."
+    }
+  ],
+  "chain": {
+    "mint_authority": null,
+    "mint_authority_renounced": true,
+    "freeze_authority": null,
+    "freeze_authority_renounced": true,
+    "supply_raw": 6861486995458751,
+    "decimals": 6,
+    "supply_ui": 6861486995.458751
+  },
+  "metadata": {
+    "name": "Jupiter",
+    "symbol": "JUP",
+    "uri": "https://static.jup.ag/jup/metadata.json"
+  },
+  "market": {
+    "listed": true,
+    "dex": "meteora",
+    "pair_address": "C8Gr6AUuq9hEdSYJzoEpNcdjpojPZwqG5MtQbeouNNwg",
+    "price_usd": "0.2121",
+    "liquidity_usd": 1613763.22,
+    "fdv": 1485071210,
+    "market_cap": 704416624,
+    "pair_created_at": 1706713193000,
+    "buys_24h": 883,
+    "sells_24h": 1440,
+    "sell_pressure": 0.6198880757640981,
+    "pair_url": "https://dexscreener.com/solana/c8gr6auuq9hedsyjzoepncdjpojpzwqg5mtqbeounnwg"
+  },
+  "scanned_at": 1789574623,
+  "agent": "SENTINEL/1.0"
+}

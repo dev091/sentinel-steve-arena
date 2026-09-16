@@ -1,26 +1,6 @@
 SENTINEL — Steve Agent Arena demo
-run at 2026-09-16 16:02:11 UTC
+run at 2026-09-16 16:03:34 UTC
 data: Solana mainnet-beta RPC (public) + DexScreener (public). Read-only. No keys.
-
-======================================================================
-[1] LIVE SCAN — USDC (EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v)
-======================================================================
-  policy check: token.scan ... ALLOW (rule=read.scan)
-SENTINEL risk report — EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
-Verdict: HIGH RISK  |  Risk score: 45/100
-
-Findings:
-  [HIGH] Mint authority active — supply can be inflated at will.
-  [HIGH] Freeze authority active — holders' tokens can be frozen.
-  [INFO] Metadata: USD Coin (USDC)
-  [INFO] Healthy liquidity ($20,586,176) on pumpswap.
-
-Mint authority: BJE5MMbqXjVwjAF7oxwPYXnTXDyspzZyt4vwenNw5ruG
-Freeze authority: 7dGbd2QZcCKcTndnHcTL8q7SMVXAkp688NTQYwrRCrar
-Supply: 7,673,669,193.85 (decimals=6)
-Market: pumpswap | liquidity $20,586,176 | https://dexscreener.com/solana/2uf4xh61rdwxng9woyxsvqp7zua6klfpb3nvnrqeoisd
-
-  -> report saved: reports/usdc.json
 
 ======================================================================
 [1] LIVE SCAN — wSOL (So11111111111111111111111111111111111111112)
@@ -28,40 +8,118 @@ Market: pumpswap | liquidity $20,586,176 | https://dexscreener.com/solana/2uf4xh
   policy check: token.scan ... ALLOW (rule=read.scan)
 SENTINEL risk report — So11111111111111111111111111111111111111112
 Verdict: SAFE  |  Risk score: 0/100
+Recommended action: No red flags detected. Standard position sizing and your usual diligence still apply.
 
 Findings:
   [INFO] Metadata: Wrapped SOL (SOL)
-  [INFO] Healthy liquidity ($32,150,468) on raydium.
+  [INFO] Healthy liquidity ($32,158,233) on raydium.
 
 Mint authority: RENOUNCED
 Freeze authority: RENOUNCED
 Supply: 0.00 (decimals=9)
-Market: raydium | liquidity $32,150,468 | https://dexscreener.com/solana/58oqchx4ywmvkdwllzzbi4chocc2fqcuwbkwmihlyqo2
+Market: raydium | liquidity $32,158,233 | https://dexscreener.com/solana/58oqchx4ywmvkdwllzzbi4chocc2fqcuwbkwmihlyqo2
 
+  latency: total 1.87s (rpc_mint 0.56s | rpc_metadata 0.49s | dexscreener 0.82s | scoring 0.0ms)
   -> report saved: reports/wsol.json
 
 ======================================================================
-[2] SIMULATED SCAN — malicious-pattern fixture (labeled, not a real token)
+[1] LIVE SCAN — USDC (EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v)
 ======================================================================
-SENTINEL risk report — SIMULATED-RISKY-FIXTURE-11111111111111111111
-Verdict: CRITICAL  |  Risk score: 95/100
+  policy check: token.scan ... ALLOW (rule=read.scan)
+SENTINEL risk report — EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
+Verdict: HIGH RISK  |  Risk score: 45/100
+Recommended action: Material risk factors present. Avoid market buys; if you must trade, use tiny size and a strict stop.
 
 Findings:
   [HIGH] Mint authority active — supply can be inflated at will.
   [HIGH] Freeze authority active — holders' tokens can be frozen.
+  [INFO] Metadata: USD Coin (USDC)
+  [INFO] Healthy liquidity ($20,642,972) on pumpswap.
+
+Mint authority: BJE5MMbqXjVwjAF7oxwPYXnTXDyspzZyt4vwenNw5ruG
+Freeze authority: 7dGbd2QZcCKcTndnHcTL8q7SMVXAkp688NTQYwrRCrar
+Supply: 7,673,515,157.12 (decimals=6)
+Market: pumpswap | liquidity $20,642,972 | https://dexscreener.com/solana/2uf4xh61rdwxng9woyxsvqp7zua6klfpb3nvnrqeoisd
+
+  latency: total 1.80s (rpc_mint 0.54s | rpc_metadata 0.50s | dexscreener 0.76s | scoring 0.0ms)
+  -> report saved: reports/usdc.json
+
+======================================================================
+[1] LIVE SCAN — USDT (Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB)
+======================================================================
+  policy check: token.scan ... ALLOW (rule=read.scan)
+SENTINEL risk report — Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB
+Verdict: HIGH RISK  |  Risk score: 45/100
+Recommended action: Material risk factors present. Avoid market buys; if you must trade, use tiny size and a strict stop.
+
+Findings:
+  [HIGH] Mint authority active — supply can be inflated at will.
+  [HIGH] Freeze authority active — holders' tokens can be frozen.
+  [INFO] Metadata: USDT (USDT)
+  [INFO] Healthy liquidity ($64,700,310) on meteora.
+
+Mint authority: Q6XprfkF8RQQKoQVG33xT88H7wi8Uk1B1CC7YAs69Gi
+Freeze authority: Q6XprfkF8RQQKoQVG33xT88H7wi8Uk1B1CC7YAs69Gi
+Supply: 3,839,903,760.41 (decimals=6)
+Market: meteora | liquidity $64,700,310 | https://dexscreener.com/solana/54vp27ulaw4wnlo5n7r4fcc6zlamoqc28xbarjss4euj
+
+  latency: total 1.65s (rpc_mint 0.41s | rpc_metadata 0.44s | dexscreener 0.80s | scoring 0.0ms)
+  -> report saved: reports/usdt.json
+
+======================================================================
+[1] LIVE SCAN — JUP (JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN)
+======================================================================
+  policy check: token.scan ... ALLOW (rule=read.scan)
+SENTINEL risk report — JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN
+Verdict: SAFE  |  Risk score: 0/100
+Recommended action: No red flags detected. Standard position sizing and your usual diligence still apply.
+
+Findings:
+  [INFO] Metadata: Jupiter (JUP)
+  [INFO] Healthy liquidity ($1,613,763) on meteora.
+
+Mint authority: RENOUNCED
+Freeze authority: RENOUNCED
+Supply: 6,861,486,995.46 (decimals=6)
+Market: meteora | liquidity $1,613,763 | https://dexscreener.com/solana/c8gr6auuq9hedsyjzoepncdjpojpzwqg5mtqbeounnwg
+
+  latency: total 3.64s (rpc_mint 0.45s | rpc_metadata 2.45s | dexscreener 0.75s | scoring 0.0ms)
+  -> report saved: reports/jup.json
+
+======================================================================
+[2] MALICIOUS-PATTERN SCAN — simulated inputs, REAL scoring engine
+    (labeled fixture, NOT a real token — no real project is defamed)
+======================================================================
+SENTINEL risk report — SIMULATED-RISKY-FIXTURE-11111111111111111111
+Verdict: CRITICAL  |  Risk score: 100/100
+Recommended action: Treat as a probable rug/honeypot. Do not buy. If already holding, exit into any liquidity immediately.
+
+Findings:
+  [HIGH] Mint authority active — supply can be inflated at will.
+  [HIGH] Freeze authority active — holders' tokens can be frozen.
+  [MED] No Metaplex metadata account — unverified/anonymous token.
   [HIGH] Thin liquidity ($3,200) — high slippage / rug risk.
   [MED] Heavy 24h sell pressure (82% of txns are sells).
   [MED] Pair is less than 24h old — extra caution.
 
-Mint authority: ACTIVE (undisclosed)
-Freeze authority: ACTIVE (undisclosed)
+Mint authority: SIMULATED-ACTIVE-MINT-AUTHORITY
+Freeze authority: SIMULATED-ACTIVE-FREEZE-AUTHORITY
 Supply: 1,000,000,000.00 (decimals=6)
 Market: raydium | liquidity $3,200
 
   -> report saved: reports/risky_fixture.json
 
 ======================================================================
-[3] POLICY ENGINE — allow + block demonstration
+[3] COMPARISON TABLE — live mainnet scans
+======================================================================
+  token verdict     score   liquidity       scan time
+  wSOL  SAFE        0/100   $  32,158,233   1.9s
+  USDC  HIGH RISK   45/100   $  20,642,972   1.8s
+  USDT  HIGH RISK   45/100   $  64,700,310   1.7s
+  JUP   SAFE        0/100   $   1,613,763   3.6s
+
+======================================================================
+[4] POLICY ENGINE — allow + block demonstration
 ======================================================================
   token.scan        -> ALLOW  (rule=read.scan)
     reason: read-only public data; no signing, no spend
@@ -73,4 +131,5 @@ Market: raydium | liquidity $3,200
 ======================================================================
 Demo complete. SENTINEL is read-only by policy: it scans, scores,
 and reports — it never signs and never moves funds.
+Zero dependencies (Python 3 stdlib only). Fully reproducible.
 ======================================================================

@@ -98,14 +98,38 @@ def get_account_info_b64(pubkey: str):
     return base64.b64decode(v["data"][0])
 
 
+# ---------------------------------------------------------------- ed25519 (for correct PDA bump discovery)
+
+_ED25519_P = 2**255 - 19
+# d = -121665 * inv(121666) mod p  (ed25519 curve constant)
+_ED25519_D = (-121665 * pow(121666, _ED25519_P - 2, _ED25519_P)) % _ED25519_P
+
+
+def _ed25519_on_curve(pubkey32: bytes) -> bool:
+    """True iff the 32-byte string decodes to a point on the ed25519 curve."""
+    y = int.from_bytes(pubkey32, "little") & ((1 << 255) - 1)  # drop sign bit
+    y2 = (y * y) % _ED25519_P
+    # x^2 = (y^2 - 1) / (d*y^2 + 1)
+    num = (y2 - 1) % _ED25519_P
+    den = (_ED25519_D * y2 + 1) % _ED25519_P
+    x2 = (num * pow(den, _ED25519_P - 2, _ED25519_P)) % _ED25519_P
+    x = pow(x2, (_ED25519_P + 3) // 8, _ED25519_P)
+    if (x * x) % _ED25519_P != x2:
+        return False
+    # verify curve equation: -x^2 + y^2 = 1 + d*x^2*y^2
+    lhs = (y2 - x2) % _ED25519_P
+    rhs = (1 + _ED25519_D * x2 % _ED25519_P * y2) % _ED25519_P
+    return lhs == rhs
+
+
 def find_program_address(seeds: list[bytes], program_id: str) -> str:
+    """Real PDA derivation: first bump (255 -> 0) whose hash is OFF the ed25519 curve."""
     prog = b58decode(program_id)
     for nonce in range(255, -1, -1):
         buf = b"".join(seeds) + bytes([nonce])
         h = hashlib.sha256(buf + prog + b"ProgramDerivedAddress").digest()
-        # off-curve check: try to keep it simple — real impl checks ed25519;
-        # first hash is overwhelmingly likely off-curve for metadata seeds
-        return b58encode(h)
+        if not _ed25519_on_curve(h):
+            return b58encode(h)
     raise RuntimeError("no PDA found")
 
 
@@ -249,19 +273,48 @@ def score_token(mint: str, chain: dict, meta: dict, market: dict) -> dict:
 
 # ---------------------------------------------------------------- public API
 
-def scan(mint: str) -> dict:
+def scan_timed(mint: str) -> tuple:
+    """Full scan with per-stage latency (seconds). Returns (report, timings dict)."""
+    t = {}
+    t0 = time.perf_counter()
     acct = get_account_info_b64(mint)
+    t["rpc_mint"] = time.perf_counter() - t0
     if acct is None:
-        return {"mint": mint, "error": "account not found on Solana mainnet", "verdict": "UNKNOWN"}
+        return ({"mint": mint, "error": "account not found on Solana mainnet", "verdict": "UNKNOWN"}, t)
+    t0 = time.perf_counter()
     chain = parse_mint(acct)
+    t["parse_mint"] = time.perf_counter() - t0
+    t0 = time.perf_counter()
     md_pda = find_program_address(
         [b"metadata", b58decode(METAPLEX_METADATA_PROGRAM), b58decode(mint)],
         METAPLEX_METADATA_PROGRAM,
     )
     md_acct = get_account_info_b64(md_pda)
+    t["rpc_metadata"] = time.perf_counter() - t0
     meta = parse_metadata(md_acct) if md_acct else {"name": None, "symbol": None, "uri": None}
+    t0 = time.perf_counter()
     market = fetch_dexscreener(mint)
-    return score_token(mint, chain, meta, market)
+    t["dexscreener"] = time.perf_counter() - t0
+    t0 = time.perf_counter()
+    rep = score_token(mint, chain, meta, market)
+    t["scoring"] = time.perf_counter() - t0
+    t["total"] = sum(t.values())
+    return rep, t
+
+
+def scan(mint: str) -> dict:
+    """Full risk scan. Returns the JSON report (use scan_timed for latency too)."""
+    rep, _ = scan_timed(mint)
+    return rep
+
+
+RECOMMENDATIONS = {
+    "SAFE": "No red flags detected. Standard position sizing and your usual diligence still apply.",
+    "CAUTION": "One or more moderate flags. Reduce size, check the findings above, and prefer limit orders.",
+    "HIGH RISK": "Material risk factors present. Avoid market buys; if you must trade, use tiny size and a strict stop.",
+    "CRITICAL": "Treat as a probable rug/honeypot. Do not buy. If already holding, exit into any liquidity immediately.",
+    "UNKNOWN": "Token account not found on mainnet — verify the mint address before doing anything.",
+}
 
 
 def report_text(r: dict) -> str:
@@ -270,6 +323,7 @@ def report_text(r: dict) -> str:
     lines = [
         f"SENTINEL risk report — {r['mint']}",
         f"Verdict: {r['verdict']}  |  Risk score: {r['risk_score']}/100",
+        f"Recommended action: {RECOMMENDATIONS.get(r['verdict'], '')}",
         "",
         "Findings:",
     ]

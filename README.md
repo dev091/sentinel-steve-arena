@@ -17,11 +17,20 @@ python3 sentinel.py EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v   # USDC
 python3 policy.py          # policy engine: one ALLOW + one DENY demonstration
 ```
 
-Live demo results (2026-09-16, mainnet):
-- **wSOL** → SAFE, 0/100 (authorities renounced, $32M liquidity)
-- **USDC** → HIGH RISK, 45/100 — the engine correctly flags USDC's *by-design*
-  active mint/freeze authorities (Circle). Authority flags are facts, not
-  accusations: regulated stablecoins score here by construction.
+Live demo results (2026-09-16, mainnet, `python3 demo.py` in ~9s):
+
+| Token | Verdict | Score | Notes |
+|---|---|---|---|
+| wSOL | SAFE | 0/100 | authorities renounced, $32.2M liquidity |
+| JUP | SAFE | 0/100 | authorities renounced, $1.6M liquidity |
+| USDC | HIGH RISK | 45/100 | flags Circle's *by-design* active mint/freeze authorities |
+| USDT | HIGH RISK | 45/100 | same by-design authority flags (Tether) |
+| Malicious-pattern fixture | CRITICAL | 100/100 | simulated inputs through the **real** scoring engine |
+
+Authority flags are facts, not accusations: regulated stablecoins score here
+by construction — the engine is honest about what it sees, which is exactly
+what makes the verdicts trustworthy. Every report also includes a
+plain-English recommended action.
 
 ## Architecture
 

@@ -9,7 +9,7 @@
     },
     {
       "severity": "INFO",
-      "detail": "Healthy liquidity ($32,150,468) on raydium."
+      "detail": "Healthy liquidity ($32,158,233) on raydium."
     }
   ],
   "chain": {
@@ -30,16 +30,16 @@
     "listed": true,
     "dex": "raydium",
     "pair_address": "58oQChx4yWmvKdwLLZzBi4ChoCc2fqCUWBkwMihLYQo2",
-    "price_usd": "97.44",
-    "liquidity_usd": 32150467.52,
+    "price_usd": "97.49",
+    "liquidity_usd": 32158233.36,
     "fdv": null,
     "market_cap": null,
     "pair_created_at": 1669602450000,
-    "buys_24h": 176229,
-    "sells_24h": 153990,
-    "sell_pressure": 0.4663268921533891,
+    "buys_24h": 176075,
+    "sells_24h": 153727,
+    "sell_pressure": 0.46611906537862113,
     "pair_url": "https://dexscreener.com/solana/58oqchx4ywmvkdwllzzbi4chocc2fqcuwbkwmihlyqo2"
   },
-  "scanned_at": 1789574543,
+  "scanned_at": 1789574615,
   "agent": "SENTINEL/1.0"
 }

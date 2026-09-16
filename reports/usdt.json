@@ -1,0 +1,53 @@
+{
+  "mint": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+  "risk_score": 45,
+  "verdict": "HIGH RISK",
+  "findings": [
+    {
+      "severity": "HIGH",
+      "detail": "Mint authority active \u2014 supply can be inflated at will."
+    },
+    {
+      "severity": "HIGH",
+      "detail": "Freeze authority active \u2014 holders' tokens can be frozen."
+    },
+    {
+      "severity": "INFO",
+      "detail": "Metadata: USDT (USDT)"
+    },
+    {
+      "severity": "INFO",
+      "detail": "Healthy liquidity ($64,700,310) on meteora."
+    }
+  ],
+  "chain": {
+    "mint_authority": "Q6XprfkF8RQQKoQVG33xT88H7wi8Uk1B1CC7YAs69Gi",
+    "mint_authority_renounced": false,
+    "freeze_authority": "Q6XprfkF8RQQKoQVG33xT88H7wi8Uk1B1CC7YAs69Gi",
+    "freeze_authority_renounced": false,
+    "supply_raw": 3839903760409574,
+    "decimals": 6,
+    "supply_ui": 3839903760.409574
+  },
+  "metadata": {
+    "name": "USDT",
+    "symbol": "USDT",
+    "uri": ""
+  },
+  "market": {
+    "listed": true,
+    "dex": "meteora",
+    "pair_address": "54Vp27uLaw4wNLo5n7r4fcC6zLamoQc28xBARjss4EUJ",
+    "price_usd": "0.09014",
+    "liquidity_usd": 64700309.81,
+    "fdv": 901414013,
+    "market_cap": 264433385,
+    "pair_created_at": 1783666044000,
+    "buys_24h": 18190,
+    "sells_24h": 15611,
+    "sell_pressure": 0.4618502411171267,
+    "pair_url": "https://dexscreener.com/solana/54vp27ulaw4wnlo5n7r4fcc6zlamoqc28xbarjss4euj"
+  },
+  "scanned_at": 1789574619,
+  "agent": "SENTINEL/1.0"
+}

@@ -17,7 +17,7 @@
     },
     {
       "severity": "INFO",
-      "detail": "Healthy liquidity ($20,586,176) on pumpswap."
+      "detail": "Healthy liquidity ($20,642,972) on pumpswap."
     }
   ],
   "chain": {
@@ -25,9 +25,9 @@
     "mint_authority_renounced": false,
     "freeze_authority": "7dGbd2QZcCKcTndnHcTL8q7SMVXAkp688NTQYwrRCrar",
     "freeze_authority_renounced": false,
-    "supply_raw": 7673669193852264,
+    "supply_raw": 7673515157122945,
     "decimals": 6,
-    "supply_ui": 7673669193.852264
+    "supply_ui": 7673515157.122945
   },
   "metadata": {
     "name": "USD Coin",
@@ -38,16 +38,16 @@
     "listed": true,
     "dex": "pumpswap",
     "pair_address": "2uF4Xh61rDwxnG9woyxsVQP7zuA6kLFpb3NvnRQeoiSd",
-    "price_usd": "0.003597",
-    "liquidity_usd": 20586176.28,
-    "fdv": 2999313912,
-    "market_cap": 1684628049,
+    "price_usd": "0.003617",
+    "liquidity_usd": 20642971.77,
+    "fdv": 3015887302,
+    "market_cap": 1693936845,
     "pair_created_at": 1752512149000,
-    "buys_24h": 32951,
-    "sells_24h": 24863,
-    "sell_pressure": 0.4300515446085723,
+    "buys_24h": 32664,
+    "sells_24h": 24674,
+    "sell_pressure": 0.4303254386270885,
     "pair_url": "https://dexscreener.com/solana/2uf4xh61rdwxng9woyxsvqp7zua6klfpb3nvnrqeoisd"
   },
-  "scanned_at": 1789574538,
+  "scanned_at": 1789574617,
   "agent": "SENTINEL/1.0"
 }

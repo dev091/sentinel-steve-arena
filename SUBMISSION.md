@@ -19,10 +19,14 @@ DexScreener. A Bento-style policy engine gates every action — read-only scans
 are auto-allowed, all value-moving actions are denied by default with a full
 audit log. The agent never signs and never moves funds.
 
-Live demo evidence (2026-09-16, mainnet, reproducible with `python3 demo.py`):
-- wSOL → SAFE, 0/100 (authorities renounced, $32M liquidity)
-- USDC → 45/100, correctly flagging Circle's by-design active authorities
-- Malicious-pattern fixture → CRITICAL, 95/100
+Live demo evidence (2026-09-16, mainnet, reproducible with `python3 demo.py` in ~9s):
+- wSOL → SAFE, 0/100 (authorities renounced, $32.2M liquidity)
+- JUP → SAFE, 0/100 (authorities renounced, $1.6M liquidity)
+- USDC → 45/100 and USDT → 45/100, honestly flagging the issuers' by-design
+  active mint/freeze authorities (facts, not accusations)
+- Malicious-pattern fixture → CRITICAL, 100/100 (simulated inputs through the
+  real scoring engine — no real token defamed)
+- Per-scan latency benchmark (~2-4s per token, scoring <1ms)
 - Policy engine: token.scan ALLOWED, swap.execute DENIED (audit-logged)
 
 SAP registration: agent.json manifest (colon-namespaced capabilities,
@@ -58,11 +62,12 @@ Demo transcript: demo_transcript.txt · Reports: reports/*.json
 ## HANDOFF — exact steps remaining (parent agent / RAHUL)
 
 ### Step 1 — Push repo public (2 min)
+Create a **new public repo** at github.com/new named `sentinel-steve-arena`
+(do NOT use `gh repo create` — the connected token can't create repos), then:
 ```bash
 cd ~/workspace/crypto/steve-arena
-# new public repo, e.g. github.com/<user>/sentinel-arena
-git init && git add . && git commit -m "SENTINEL: Steve Agent Arena entry"
-gh repo create sentinel-arena --public --source=. --push
+git remote add origin https://github.com/<user>/sentinel-steve-arena.git
+git push -u origin master
 # then paste the repo URL into this file's placeholders
 ```
 
